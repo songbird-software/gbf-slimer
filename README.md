@@ -1,5 +1,5 @@
 # gbf-slimer
-An AHK newbie's solution to GBF's lack of a quest repeat
+An AHK newbie's solution to Granblue Fantasy's lack of a quest repeat
 
 ## About
 Granblue Fantasy has been out for ten years now, and we still don't have an auto-repeat for simple quests like slimes.
