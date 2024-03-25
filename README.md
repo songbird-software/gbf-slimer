@@ -25,6 +25,7 @@ By default, this script will:
 - Close Gran/Djeeta EMP level up notifications
 - Close party member EMP level up notifications
 - Add the support summon player as a friend (if they were not already a friend)
+- Close Skyscope quest notifications
 - Close achievement notifications
 - Restart the quest
 
