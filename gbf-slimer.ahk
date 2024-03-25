@@ -24,9 +24,9 @@ global windowForceWidth := 549
 global windowForceHeight := 1015
 
 ;============================================================================= User Config
-global enableCheats                 := true                 ;whether to enable functionality that could be considered cheating, like automatically refilling AP or infinite quest time
-global addSupportSummonFriend 		:= true 				;whether to add players as friends whose support summon you used
-global errorLogging			        := true					;whether you want error messages to be logged, useful for debugging
+global enableCheats                 := false                 ;whether to enable functionality that could be considered cheating, like automatically refilling AP or infinite quest time
+global addSupportSummonFriend 		:= false 				;whether to add players as friends whose support summon you used
+global errorLogging			        := false					;whether you want error messages to be logged, useful for debugging
 global skipWhileNotChecks           := false                ;skips while loops that wait until a button is available, useful for debugging failed image searches later in the script without restarting the quest
 
 ;============================================================================= Code
@@ -139,7 +139,10 @@ F1::
     winID := WinExist("A")
     WinGetActiveStats, winTitle, winWidth, winHeight, winXPos, winYPos
     WinMove, ahk_id %winID%, , winXPos, winYPos, windowForceWidth, windowForceHeight
-    FileCreateDir, logs
+
+    if (errorLogging) {
+        FileCreateDir, logs
+    }
 
 	foundCoords := 0
 	winWidth := 0
