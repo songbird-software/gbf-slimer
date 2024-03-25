@@ -48,7 +48,7 @@ Usage is pretty straightforward:
 3. Download the gbf-slimer repository
 4. Start GBF on Bluestacks and navigate to the quest you want to farm
 5. Start the gbf-slimer.ahk script as administrator (if you start the script normally it will ask you for admin privileges)
-6. **Make sure you're on the support summon screen and Bluestacks is your active window**
+6. ***Make sure you're on the support summon screen and Bluestacks is your active window***
 7. Press `F1` to start the script
 8. Type in how many hours you want the script to run, or how many hours your journey drop buffs will last (default is one hour, floating point decimals are accepted for partial hours)
 9. You're already farming!
