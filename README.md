@@ -28,8 +28,10 @@ By default, this script will:
 - Close achievement notifications
 - Restart the quest
 
+This script is also capable of running with the client window unfocused, without interfering with normal mouse and keyboard input.
+
 This is the baseline limit of the script, because my own intention for this script is not to completely remove any grind from the game.
-I simply want my journey drops to stop going to waste because I got distracted or had to take care of something.
+I just want my journey drops to stop going to waste because I got distracted or had to take care of something.
 
 That being said, for completeness I have included the following functionality.
 It can also:
