@@ -62,3 +62,6 @@ Usage is pretty straightforward:
 
 ## Feedback
 Feedback and bug reports are welcome, and I will be making updates when possible, but please understand that this was a fun side project for me and that I don't have any time dedicated to the maintenance of this script.  If you like this script and want to modify it for your language, I'm happy to provide assistance.
+
+## Credits
+tariqporter and team, as well as MasterFocus, for their work on the GDIP library, without which this project would be significantly less robust.
