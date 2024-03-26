@@ -19,7 +19,7 @@ global millisPerHour := 3600000
 global log_error := "ERROR"
 global log_info := "INFO"
 
-;these are an unfortunate limitation of searching by image, if you want a different size window, you will need to replace all of the images in the image folder, i wish you luck
+;these are an unfortunate limitation of searching by image, if you want a different size window, you will likely need to replace all of the images in the image folder, i wish you luck
 global windowForceWidth := 549
 global windowForceHeight := 1015
 
@@ -191,7 +191,7 @@ F1::
 			ClickHandler(foundCoords, 2000, winID)
 		}
 
-		;check if auto charge is on, turn it off if it is on
+		;check if auto charge is on, turn it on if it is off
 		if (ImageSearchWrapper(foundCoords, winID, halfWinWidth, winWidth, winHeight//3, winHeight, false, "charge_hold.png")) {
 			ClickHandler(foundCoords, 2000, winID)
 		}
@@ -247,7 +247,7 @@ F1::
 			ClickHandler(foundCoords, 2000, winID)
 		}
 
-        ;check for skyscope mission notifications
+        ;check for skyscope mission notifications, click close if we do
         if (ImageSearchWrapper(foundCoords, winID, 0, winWidth, 0, halfWinHeight, false, "skyscope.png")) {
             ImageSearchWrapper(foundCoords, winID, 0, winWidth, halfWinHeight, winHeight, true, "skyscope_close.png")
 			ClickHandler(foundCoords, 2000, winID)
