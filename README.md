@@ -55,6 +55,14 @@ Usage is pretty straightforward:
 10. Use `F2` to pause the script and `F3` to shutdown the script
 11. The script will auto shutdown after the input duration has elapsed, or once you have run out of AP (if cheats are disabled)
 
+## Configuration
+This script offers a handful of customizable feature flags near the top of the script file.
+To change them, open the script file with any text editor and look for the section labeled "User Config". All of the flags are boolean, their values should only be set to true or false.
+- enableCheats           --- This will enable/disable the additional functionality for unlimited quest time and automatic AP refill
+- addSupportSummonFriend --- This will enable/disable whether the script will automatically add players as friends whose support summons you've used. True will send a friend request, false will skip sending a request.
+- errorLogging           --- This will enable/disable logging to file. By default, logs are created in the "logs" subfolder. New log files are started on a day to day basis to prevent unmanageable log file size.
+- skipWhileNotChecks     --- This will enable/disable the looping checks that wait until a button is available. This is a debug feature intended to skip image checks that we know to be functional in order to skip to other image checks that might be failing.
+
 ## Known Limitations
 - 1920x1080 minimum resolution requirement: This is because this script uses image search to detect the presence of buttons and popups. Realistically you just need a display that can do 1015 pixels vertically, since I took the image samples with a client size of 549x1015.
 - English client: Again, this is due to image searching. I play on an English client and so the image samples contain English text.
