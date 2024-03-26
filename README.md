@@ -13,7 +13,7 @@ which is not being supported by supersampling or resize interpolation.
 
 ### What This Script Will Do
 By default, this script will:
-- Accept an input of hours to run, between 0 and 4, with decimals accepted
+- Accept an input of hours to run, between 0 and 4 (defaulting to 1), with decimals accepted for partial hours
 - Resize the Bluestacks window to the appropriate resolution
 - Pick the first available support summon
 - Start the quest
