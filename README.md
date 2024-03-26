@@ -4,7 +4,7 @@ An AHK newbie's solution to Granblue Fantasy's lack of a quest repeat
 ## About
 Granblue Fantasy has been out for ten years now, and we still don't have an auto-repeat for simple quests like slimes.
 
-Some people say its because the developers can't figure out how to make it work without setting the servers on fire, but noone seems to really know why.
+Some people say its because the developers can't figure out how to make it work without setting the servers on fire, but noone seems to really know the real reason.
 I got tired of my journey drops going to waste because I can't babysit a mobile game and press simple buttons like a monkey for several hours, so I made this project.
 
 This project is currently aimed at English desktop users of GBF with a 1920x1080 or higher resolution playing on Bluestacks.
