@@ -66,10 +66,10 @@ To change them, open the script file with any text editor and look for the secti
 ## Known Limitations
 - 1920x1080 minimum resolution requirement: This is because this script uses image search to detect the presence of buttons and popups. Realistically you just need a display that can do 1015 pixels vertically, since I took the image samples with a client size of 549x1015.
 - English client: Again, this is due to image searching. I play on an English client and so the image samples contain English text.
-- System resources/connection speed: While I've tried to make this script as robust as possible, some of the code still operates on timers and don't handle delays well. Resource-starved clients or slow connection speeds may require some of the timers to be adjusted.
+- System resources/connection speed: While I've tried to make this script as flexible as possible, some of the code still operates on timers and doesn't always handle delays in client rendering well. Resource-starved clients or slow connection speeds may require some of the timers to be adjusted.
 
 ## Feedback
-Feedback and bug reports are welcome, and I will be making updates when possible, but please understand that this was a fun side project for me and that I don't have any time dedicated to the maintenance of this script.  If you like this script and want to modify it for your language, I'm happy to provide assistance.
+Feedback and bug reports are welcome, and I will be making updates when possible, but please understand that this was a fun side project for me and that I don't have any time dedicated to the maintenance of this script.  If you like this script and want to modify it for your language, I'm happy to provide assistance. I have done my best to make the code as readable as possible, and left plenty of comments to ensure the script is well-documented, so if you do have to make changes, it will hopefully be fairly easy.
 
 ## Credits
-tariqporter and team, as well as MasterFocus, for their work on the GDIP library, without which this project would be significantly less robust.
+tariqporter and mmikeww (and any others not listed as contributors) for their work on GDIP. MasterFocus, for their work on using GDIP as an image search tool. Without these libraries the project would be significantly less robust.
