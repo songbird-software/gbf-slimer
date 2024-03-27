@@ -93,7 +93,7 @@ ImageSearchWrapper(byref foundCoords, winHandle, x1Search, x2Search, y1Search, y
 
         ;retry with higher variation allowance
         if (logError) {
-            WriteLog(Format("Retry finding image {1}. Search area (x1 y1 x2 y2): {2} {3} {4} {5}", imageFileName, x1Search, y1Search, x2Search, y2Search), log_error)
+            WriteLog(Format("Retry finding image {1}. Search area (x1,y1,x2,y2): {2},{3},{4},{5}", imageFileName, x1Search, y1Search, x2Search, y2Search), log_error)
         }
 		returnValue := Gdip_ImageSearch(bmpHaystack, bmpNeedle, foundCoords, x1Search, y1Search, x2Search, y2Search, 40)
 
@@ -211,10 +211,11 @@ F1::
 		while (!(skipWhileNotChecks) AND !(ImageSearchWrapper(foundCoords, winID, 0, winWidth, 0, tenthWinHeight*2, false, "quest_results.png"))) {
 			Sleep, 3000
 		}
-        Sleep, 500
+        Sleep, 1000
 
 		;click OK in the bottom half of screen for quest results
-		ImageSearchWrapper(foundCoords, winID, 0, winWidth, halfWinHeight, winHeight, true, "ok2.png")
+        ;two checks here because for some reason the 10x birthday thing has a slightly different ok image
+		(ImageSearchWrapper(foundCoords, winID, 0, winWidth, halfWinHeight, winHeight, true, "ok2.png") OR ImageSearchWrapper(foundCoords, winID, 0, winWidth, halfWinHeight, winHeight, true, "ok3.png"))
 		ClickHandler(foundCoords, 1000, winID)
 
 		;click middle of screen to skip exp bar animation
@@ -235,6 +236,12 @@ F1::
 		;check to see if we have party member EMP level up notifications, click through them if we do
 		while ImageSearchWrapper(foundCoords, winID, halfWinWidth-tenthWinWidth, halfWinWidth+tenthWinWidth, halfWinHeight-tenthWinHeight, halfWinHeight+tenthWinHeight, false, "emp_up.png") {
 			ClickHandler(foundCoords, 3000, winID)
+		}
+
+        ;check to see if we have journey drop notifications, click ok if we do
+		if (ImageSearchWrapper(foundCoords, winID, 0, winWidth, 0, halfWinHeight, false, "journey_drops.png")) {
+            ImageSearchWrapper(foundCoords, winID, 0, winWidth, halfWinHeight, winHeight, true, "journey_drops_ok.png")
+			ClickHandler(foundCoords, 2000, winID)
 		}
 
 		;click play again, center vertical, left half
